@@ -1,0 +1,24 @@
+- rest:
+    id: rest-49b8
+    path: /testProject
+    bindingMode: auto
+    get:
+      - id: get-9142
+        path: /test
+        to: direct:start
+        bindingMode: auto
+- route:
+    id: route-6da3
+    nodePrefixId: route-78f
+    from:
+      id: from-dd07
+      uri: direct
+      parameters:
+        name: start
+      steps:
+        - setBody:
+            id: setBody-14f0
+            expression:
+              constant:
+                id: constant-397a
+                expression: "{\"test\" : \"Success\"}"
