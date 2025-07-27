@@ -1,12 +1,14 @@
 - rest:
     id: rest-49b8
     path: /testProject
-    bindingMode: auto
+    produces: application/json
+    bindingMode: json
     get:
       - id: get-9142
         path: /test
         to: direct:start
-        bindingMode: auto
+        produces: application/json
+        bindingMode: json
 - route:
     id: route-6da3
     nodePrefixId: route-78f
